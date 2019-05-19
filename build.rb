@@ -1,16 +1,15 @@
 require 'sportdb/models'
 require 'datafile'
 
-
 DB_CONFIG = {
   adapter:  'postgresql',
   encoding: 'unicode',
   username: 'postgres',
   password:  'changeme',
+  host: 'localhost',
   pool:      5,
   timeout:   5000
 }
-
 
 ActiveRecord::Base.establish_connection( DB_CONFIG )
 
