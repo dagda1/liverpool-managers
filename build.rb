@@ -7,6 +7,7 @@ DB_CONFIG = {
   username: 'postgres',
   password:  'changeme',
   host: 'localhost',
+  database: 'premiership',
   pool:      5,
   timeout:   5000
 }
@@ -17,7 +18,6 @@ Dir.chdir "eng-england"
 
 SportDb.create_all
 SportDb.read_builtin
-
 
 datafile = Datafile::Datafile.load_file( "./Datafile" )
 
