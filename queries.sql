@@ -10,5 +10,6 @@ WHERE games.team1_id = 9
   OR games.team2_id = 9
 ORDER BY games.play_at DESC;
 
+
 -- SELECT *
 -- from games;
