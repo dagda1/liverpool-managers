@@ -1,5 +1,4 @@
-require 'sportdb/models'
-require 'datafile'
+require 'sportdb/import'
 
 DB_CONFIG = {
   adapter:  'postgresql',
@@ -16,12 +15,11 @@ ActiveRecord::Base.establish_connection( DB_CONFIG )
 
 Dir.chdir "eng-england"
 
-SportDb.create_all
-SportDb.read_builtin
+ ## build schema 
+ SportDb.create_all 
 
-datafile = Datafile::Datafile.load_file( "./Datafile" )
+ ## turn on logging to console 
+ ActiveRecord::Base.logger = Logger.new(STDOUT) 
 
-datafile.dump
-
-datafile.download    ## download zips from github - saved to ./tmp
-datafile.read        ## read into / import into sql database
+ pack = CsvMatchImporter.new( '../england' ) 
+ pack.import_leagues 
