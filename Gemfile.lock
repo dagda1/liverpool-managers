@@ -40,9 +40,15 @@ GEM
       activerecord
       props (>= 1.2.0)
     rubyzip (1.2.2)
+    sportdb-config (0.3.4)
+    sportdb-import (0.2.2)
+      sportdb-models (>= 1.18.0)
+      sportdb-text (>= 0.2.3)
     sportdb-models (1.18.0)
       persondb-models (>= 0.4.2)
       worlddb-models (>= 2.1.0)
+    sportdb-text (0.2.3)
+      sportdb-config (>= 0.2.3)
     tagutils (1.0.0)
       activerecord
       logutils (>= 0.6.1)
@@ -74,6 +80,7 @@ DEPENDENCIES
   activerecord (~> 5.2, >= 5.2.3)
   datafile (~> 0.2.5)
   pg (~> 1.1, >= 1.1.4)
+  sportdb-import (~> 0.2.2)
   sportdb-models (~> 1.18)
 
 BUNDLED WITH

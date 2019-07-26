@@ -1,0 +1,6 @@
+[submodule "clubs"]
+	path = clubs
+	url = git@github.com:openfootball/clubs.git
+[submodule "england"]
+	path = england
+	url = git@github.com:footballcsv/england.git
